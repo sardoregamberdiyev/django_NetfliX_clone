@@ -1,0 +1,167 @@
+{% extends "Base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="container-fluid">
+            {% include 'Navbar.html' %}
+        </div>
+    </div>
+    <div class="container-fluid movie-show-section">
+        <h5><b>Trending Now</b></h5>
+        <div class="row">
+            {% for now_playing in now_playing_movies|slice:":4" %}
+            <div class="col-sm-3 mb-3 d-flex align-items-stretch">
+                <a href="{% url 'MovieDetails' now_playing.id %}">
+                    <img src="https://image.tmdb.org/t/p/w500/{{ now_playing.poster_path }}" class="fluid img-thumbnail">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container-fluid movie-show-section">
+        <h5><b>Critically Aclaimed TV Shows</b></h5>
+        <div class="row">
+            {% for tv_show in top_rated_shows|slice:":4" %}
+            <div class="col-sm-3 mb-3 d-flex align-items-stretch">
+                <a href="{% url 'TVDetails' tv_show.id %}">
+                    <img src="https://image.tmdb.org/t/p/w500/{{ tv_show.poster_path }}" class="fluid img-thumbnail">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container-fluid movie-show-section">
+        <h5><b>Top Picks</b></h5>
+        <div class="row">
+            {% for top in top_rated|slice:":4" %}
+            <div class="col-sm-3 mb-3 d-flex align-items-stretch">
+                <a href="{% url 'MovieDetails' top.id %}">
+                    <img src="https://image.tmdb.org/t/p/w500/{{ top.poster_path }}" class="fluid img-thumbnail">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container-fluid movie-show-section" style="margin-bottom: 50px;">
+        <h5><b>Must Watch Shows</b></h5>
+        <div class="row">
+            {% for popular in popular_tv|slice:":4" %}
+            <div class="col-sm-3 mb-3 d-flex align-items-stretch">
+                <a href="{% url 'TVDetails' popular.id %}">
+                    <img src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" class="fluid img-thumbnail">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container-fluid movie-show-section">
+        <h5><b>Watch It Again</b></h5>
+        <div class="row">
+            {% for upcoming in upcoming|slice:":4" %}
+            <div class="col-sm-3 mb-3 d-flex align-items-stretch">
+                <a href="{% url 'MovieDetails' upcoming.id %}">
+                    <img src="https://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" class="fluid img-thumbnail">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark">
+
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left mt-5">
+
+        <!-- Grid row -->
+        <div class="row mt-3">
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+            <!-- Links -->
+            <p>
+              <a href="#!">FAQ</a>
+            </p>
+            <p>
+              <a href="#!">Investor Relations</a>
+            </p>
+            <p>
+              <a href="#!">Privacy</a>
+            </p>
+            <p>
+              <a href="#!">Speed Test</a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+            <!-- Links -->
+            <p>
+              <a href="#!">Help Center</a>
+            </p>
+            <p>
+              <a href="#!">Jobs</a>
+            </p>
+            <p>
+              <a href="#!">Cookie Preferences</a>
+            </p>
+            <p>
+              <a href="#!">Legal Notices</a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+            <!-- Links -->
+            <p>
+              <a href="#!">Account</a>
+            </p>
+            <p>
+              <a href="#!">Ways to Watch</a>
+            </p>
+            <p>
+              <a href="#!">Corporate Information</a>
+            </p>
+            <p>
+              <a href="#!">Only on Netflix</a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+            <!-- Links -->
+            <p>
+              <a href="#!">Media Center</a>
+            <p>
+              <a href="#!">Terms of Use</a>
+            <p>
+              <a href="#!">Contact Us</a>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2022 Copyright
+        <a href="https://github.com/steve-njuguna-k/Django-Netflix-Clone" target="_blank"> Django Netflix Clone</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->   
+{% endblock %}
