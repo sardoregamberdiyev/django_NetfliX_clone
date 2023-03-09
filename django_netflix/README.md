@@ -1,5 +1,5 @@
 # Django Netflix Clone
-This is a clone of the popular video streaming site Netflix. Built using Django and uses the requests library to handle data from TMDB API.
+Bu mashhur Netflix video oqim saytining kloni. Django yordamida yaratilgan va TMDB API ma'lumotlarini qayta ishlash uchun so'rovlar kutubxonasidan foydalanadi.
 
 ![](https://github.com/steve-njuguna-k/Django-Netflix-Clone/blob/master/Screenshot.PNG)
 
@@ -8,14 +8,14 @@ This is a clone of the popular video streaming site Netflix. Built using Django 
 - [Steve Njuguna](https://github.com/steve-njuguna-k)
 
 ## Requirements
-The user can perform the following functions:
+Foydalanuvchi quyidagi funktsiyalarni bajarishi mumkin:
 
-- A user can view the different movies and Tv shows that are available.
-- A user can view a description Of the movie and its current rating.
-- A user watch a trailer for a movie or a Tv Show.
+- Foydalanuvchi mavjud bo'lgan turli filmlar va teleko'rsatuvlarni ko'rishi mumkin.
+- Foydalanuvchi film tavsifi va uning joriy reytingini ko'rishi mumkin.
+- Foydalanuvchi film yoki teleko'rsatuv treylerini tomosha qiladi.
 
 ## Installation / Setup instruction
-The application requires the following installations to operate:
+Ilova ishlashi uchun quyidagi o'rnatishlarni talab qiladi:
 - pip
 - gunicorn
 - django
@@ -42,11 +42,11 @@ py -m venv env
 ```
 env\scripts\activate
 ```
-5. Open CMD & Install Dependancies
+5. CMD-ni oching va bog'liqliklarni o'rnating
 ```
 pip install -r requirements.txt
 ```
-6. Make Migrations
+6. Yaratish Migrations
 ```
 py manage.py makemigrations
 ```
@@ -54,14 +54,12 @@ py manage.py makemigrations
 ```
 py manage.py migrate
 ```
-8. Run Application
+8. Ilovani ishga tushirish
 ```
 py manage.py runserver
 ```
 
 ## Known Bugs
-- There are no known bugs currently but pull requests are allowed incase you spot a bug
+- Hozircha maʼlum xatoliklar yoʻq, lekin agar siz xatolikni aniqlasangiz, tortib olish soʻrovlariga ruxsat beriladi
 
-© 2022 Steve Njuguna & Faith Njoki
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+© 2023 Egamberdiyev Sardor
